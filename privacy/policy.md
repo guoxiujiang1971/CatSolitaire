@@ -6,7 +6,7 @@ Cat Solitaire ("the app" / "the game") is a single-player game that runs entirel
 on your device. It **does not collect, upload, or share any personal
 information**.
 
-> 中文版：<https://guoxiujiang1971.github.io/CatSolitaire/zh-CN.html>
+> 中文版 / Chinese version: <../privacy.zh-CN/>
 
 ## What we collect
 
