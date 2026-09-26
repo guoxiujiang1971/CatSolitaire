@@ -5,6 +5,8 @@
 Cat Solitaire（"本应用"/"游戏"）是一款完全在设备本机运行的单机游戏。
 它**不收集、不上传、不共享任何个人信息**。
 
+> English version: <https://guoxiujiang1971.github.io/CatSolitaire/>
+
 ## 我们收集什么
 
 **没有。**
