@@ -59,20 +59,25 @@
 <main>
 <h1>Cat Solitaire 隐私政策</h1>
 <p class="langbar"><a href="../privacy.zh-CN/" aria-current="true">中文</a><span class="sep">|</span><a href="../privacy/">English</a></p>
-<p><strong>生效日期：2026-09-26</strong></p>
+<p><strong>生效日期：2026-09-27</strong></p>
 <p>Cat Solitaire（"本应用"/"游戏"）是一款完全在设备本机运行的单机游戏。 它<strong>不收集、不上传、不共享任何个人信息</strong>。</p>
 <blockquote style="margin:1.1rem 0;padding:.6rem .9rem;border-left:3px solid #d8d8e0;color:#4a4a56"><a href="../privacy/" rel="noopener">English Privacy Policy / 英文隐私政策</a></blockquote>
 <h2>我们收集什么</h2>
 <p><strong>没有。</strong></p>
 <p>本应用不收集姓名、邮箱、电话号码、设备标识符、位置、照片、通讯录， 或任何其他个人信息。游戏内没有注册或登录，不会创建账号。</p>
 <h2>数据存在哪里</h2>
-<p>你所有的东西都保存在你的设备本机：</p>
-<table><thead><tr><th>内容</th><th>位置</th><th>说明</th></tr></thead><tbody><tr><td>关卡进度、章节、金币、你获得的猫</td><td>应用私有目录（<code>user://</code>）</td><td>卸载应用即删除</td></tr><tr><td>界面语言、音效开关</td><td>应用私有目录</td><td>卸载应用即删除</td></tr><tr><td>购买的解锁状态</td><td><strong>不在本机</strong> —— 每次启动向 Google Play 查询你账号下的购买记录</td><td>见下节</td></tr></tbody></table>
+<p>你所有的东西都保存在你的设备本机（应用私有目录）：</p>
+<table><thead><tr><th>内容</th><th>位置</th><th>说明</th></tr></thead><tbody><tr><td>关卡进度、章节、金币、你获得的猫</td><td>应用私有目录（<code>user://</code>）</td><td>卸载应用即删除</td></tr><tr><td>界面语言、音效开关</td><td>应用私有目录</td><td>卸载应用即删除</td></tr><tr><td>购买的解锁状态</td><td>应用私有目录 —— <strong>仅本地缓存</strong></td><td>见下节</td></tr></tbody></table>
 <p><strong>本应用不会把游戏进度或任何数据上传到我们的服务器。我们没有服务器。</strong></p>
+<p>### 关于那个本地解锁缓存</p>
+<p>购买确认之后，应用会在自己的私有目录里写一个小标记，这样不必每次启动都去 问商店你已经解锁。这个标记<strong>只有一个值</strong>——"已解锁"——不含收据、 不含账号标识、不含设备标识。</p>
+<p>它只是方便用的缓存，不是权威来源。如果你把它删掉（卸载应用即会删除）， 下次进入解锁界面时应用会重新询问商店，并根据你的商店账号识别出这笔购买。</p>
 <h2>唯一的网络请求</h2>
-<p>本应用<strong>只</strong>会与 Google Play 通信，目的仅有一个：<strong>确认你是否购买过内购商品</strong>。</p>
-<ul><li>通信对象：Google Play（由 Google 提供）</li><li>请求内容：向 Google 询问你的账号下是否有 <code>cat_solitaire_full</code> 这笔购买</li><li>我们的角色：不参与、不代理、不存储</li><li>Google 对此数据的处理适用 <strong>Google 隐私政策</strong>：</li></ul>
-<p><a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a></p>
+<p>本应用<strong>只</strong>会与<strong>你所在的应用商店</strong>通信，目的仅有一个： <strong>确认你是否购买过内购商品</strong>。</p>
+<p>具体是哪个商店，取决于设备：</p>
+<table><thead><tr><th>平台</th><th>通信对象</th><th>什么时候问</th></tr></thead><tbody><tr><td>Android</td><td><strong>Google Play</strong>（由 Google 提供）</td><td>启动时问一次</td></tr><tr><td>iOS</td><td><strong>Apple App Store / StoreKit</strong>（由 Apple 提供）</td><td><strong>只在你进入解锁界面时</strong>，以及你点「恢复购买」时</td></tr></tbody></table>
+<ul><li>请求内容：向商店询问你的账号下是否有 <code>cat_solitaire_full</code> 这笔购买</li><li>我们的角色：不参与、不代理、不存储</li><li><strong>iOS 上我们故意不在启动时询问。</strong> 启动就问会导致每次打开游戏都弹出</li></ul>
+<p>Apple 登录提示，所以我们等到你真正进入解锁界面——那一刻答案才有意义。</p>
 <p>我们看不到、也拿不到你的任何账号信息。</p>
 <h2>权限</h2>
 <p>本应用<strong>不申请任何运行时权限</strong>（不访问相机、麦克风、位置、存储、通讯录）。</p>
@@ -80,15 +85,23 @@
 <p>本应用不收集任何数据，因此不涉及收集儿童个人信息。</p>
 <h2>第三方服务</h2>
 <p>本应用<strong>不集成</strong>任何第三方分析、广告或崩溃统计 SDK。</p>
-<p>唯一的外部组件是 Google Play 的应用内购买服务，由 Google 提供并按其 隐私政策处理；它只在<strong>你主动点击购买按钮</strong>时才会被调用。</p>
+<p>唯一的外部组件是所在平台的应用内购买服务——Android 上是 <strong>Google Play Billing</strong>，iOS 上是 <strong>Apple App Store / StoreKit</strong>——分别由 Google 和 Apple 提供，并按其隐私政策处理：</p>
+<ul><li><strong>Google 隐私政策</strong>：<a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a></li><li><strong>Apple 隐私政策</strong>：<a href="https://www.apple.com/legal/privacy/" rel="noopener">https://www.apple.com/legal/privacy/</a></li></ul>
+<p>它只在<strong>你主动点击购买按钮</strong>时、或你打开解锁界面时才会被调用。</p>
+<h2>购买、退款与恢复</h2>
+<p>本应用只有一个<strong>非消耗型</strong>内购项目：一次性解锁第 2–6 章和全部 16 只猫。 它不是订阅，不会自动续费。</p>
+<ul><li><strong>Apple：</strong> 在解锁界面点 <strong>Restore Purchases（恢复购买）</strong> 即可恢复。</li></ul>
+<p>退款请使用 Apple 的 <a href="https://reportaproblem.apple.com/" rel="noopener">Report a Problem</a>。</p>
+<ul><li><strong>Google：</strong> 同样点 <strong>Restore Purchases（恢复购买）</strong> 恢复。</li></ul>
+<p>退款请联系 Google 支持： <a href="https://support.google.com/googleplay/answer/2741495" rel="noopener">https://support.google.com/googleplay/answer/2741495</a></p>
 <h2>你的权利</h2>
 <p>因为我们不收集数据，所以没有可删除的东西——我们的服务器上不存在 你的任何记录。</p>
 <p>你也可以随时在设备上删除游戏的全部数据：<strong>卸载应用即可</strong>（这会一并 删除关卡进度、设置，以及系统保存的游戏进度备份）。</p>
-<p>若要删除你在 Google Play 的购买记录，请直接联系 Google 支持： <a href="https://support.google.com/googleplay/answer/2741495" rel="noopener">https://support.google.com/googleplay/answer/2741495</a></p>
+<p>若要删除你在 Google Play 或 Apple 的购买记录，请直接通过上面的链接 联系 Google 或 Apple——我们并不持有它。</p>
 <h2>变更</h2>
 <p>本政策如有变更，会随应用更新一并发布，并更新顶部的生效日期。 由于本应用不收集数据，政策变更不会影响你已经有的任何信息。</p>
 <h2>联系方式</h2>
-<p>如对本政策有疑问，请通过应用在 Google Play 页面上的开发者联系邮箱与我们联系。</p>
+<p>如对本政策有疑问，请联系：<strong>kitterive@qq.com</strong></p>
 </main>
 <footer>
   <p>Cat Solitaire &middot; 本页面由仓库源码 <code>docs/listing/privacy.zh-CN.md</code> 生成。</p>
